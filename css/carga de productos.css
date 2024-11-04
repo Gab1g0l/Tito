@@ -1,0 +1,70 @@
+:root {
+    --bg-color: #F5D8A9;
+    --nav-color: #2C3640;
+    --highlight-color: #D1005E;
+    --text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.product-container {
+    background-color: var(--nav-color);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
