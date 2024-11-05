@@ -1,37 +1,47 @@
-function saveProduct() {
-    // Obtener los valores de los campos del formulario
-    const name = document.getElementById("productName").value;
-    const description = document.getElementById("productDescription").value;
-    const price = document.getElementById("productPrice").value;
-    const image = document.getElementById("productImage").files[0];
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.getElementById("hamburgerMenu");
+    const navLinks = document.getElementById("navLinks");
 
-    // Validación básica
-    if (!name || !description || !price || !image) {
-        alert("Por favor, completa todos los campos.");
-        return;
-    }
+    hamburgerMenu.addEventListener("click", function() {
+        navLinks.classList.toggle("show");
+    });
+});
 
-    // Crear el objeto del producto
-    const product = {
-        name: name,
-        description: description,
-        price: price,
-        imageURL: URL.createObjectURL(image) // Crear una URL temporal para la imagen
+const form = document.getElementById('product-form');
+const productTableBody = document.getElementById('product-table-body');
+
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    
+    const nombre = document.getElementById('nombre-producto').value;
+    const descripcion = document.getElementById('descripcion-producto').value;
+    const precio = document.getElementById('precio-producto').value;
+    const imagen = document.getElementById('imagen-producto').files[0];
+
+    
+    const producto = {
+        nombre: nombre,
+        descripcion: descripcion,
+        precio: precio,
+        imagen: URL.createObjectURL(imagen) 
     };
 
-    // Obtener los productos actuales del almacenamiento local
-    let products = JSON.parse(localStorage.getItem("products")) || [];
-    
-    // Agregar el nuevo producto
-    products.push(product);
+   
+    const productos = JSON.parse(localStorage.getItem('productos')) || [];
 
-    // Guardar en el almacenamiento local
-    localStorage.setItem("products", JSON.stringify(products));
-
-    // Confirmación
-    alert("Producto guardado exitosamente.");
     
-    // Limpiar el formulario
-    document.getElementById("productForm").reset();
-}
+    productos.push(producto);
+
+   
+    localStorage.setItem('productos', JSON.stringify(productos));
+
+   
+    form.reset();
+    alert('Producto guardado exitosamente!');
+    
+    window.location.href = "producto.html";
+});
+
 

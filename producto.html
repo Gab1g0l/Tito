@@ -29,11 +29,11 @@
         <div class="product-column">
 
             <div class="product-card" onclick="irADetalles('detalle producto 1.html')">
-                <img src="./assets/Producto 1.png" alt="Producto 1">
+                <img src="./assets/Producto 1.png" alt="Camara Fotográfica Canon Rebel">
                 <h3>Camara Fotográfica Canon Rebel</h3>
                 <p>PRECIO: $1.382.789</p>
             </div>
-            <button class="buy-button" onclick="comprarProducto('error 404.html')">Comprar</button>
+            <button class="buy-button" onclick="comprarProducto('')">Comprar</button>
             
 
             <div class="product-card" onclick="irADetalles('detalle producto 2.html')">
@@ -43,7 +43,7 @@
                 <p>PRECIO: $1.899.000</p>
                 
             </div>
-            <button class="buy-button" onclick="comprarProducto('error 404.html')">Comprar</button>
+            <button class="buy-button" onclick="comprarProducto('')">Comprar</button>
 
         </div>
         <div class="product-column">
@@ -54,7 +54,7 @@
                 <p>PRECIO: $1.611.929</p>
                 
             </div>
-            <button class="buy-button" onclick="comprarProducto('error 404.html')">Comprar</button>
+            <button class="buy-button" onclick="comprarProducto('')">Comprar</button>
 
             <div class="product-card" onclick="irADetalles('detalle producto 4.html')">
                 <div>
@@ -63,14 +63,14 @@
                 <h3>Camara De Fotos Fotografica 35 Mm</h3>
                 <p>PRECIO: $119.000</p>
             </div>
-            <button class="buy-button" onclick="comprarProducto('error 404.html')">Comprar</button>
+            <button class="buy-button" onclick="comprarProducto('')">Comprar</button>
 
             <div class="product-card2" onclick="irADetalles('detalle producto 5.html')">
                 <img src="./assets/producto 5.png" alt="Producto 1">
                 <h3>Cámara Fotográfica Digital Para Niños Chicos 15mp Recargable</h3>
                 <p>PRECIO: $49.490</p>
             </div>
-            <button class="buy-button2" onclick="comprarProducto('error 404.html')">Comprar</button>
+            <button class="buy-button2" onclick="comprarProducto('')">Comprar</button>
 
             <div class="product-card2" onclick="irADetalles('detalle producto 6.html')">
                 <img src="./assets/producto 6.png" alt="Producto 1">
@@ -78,7 +78,7 @@
                 <p>PRECIO: $820.909</p>
                 
             </div>
-            <button class="buy-button4" onclick="comprarProducto('error 404.html')">Comprar</button>
+            <button class="buy-button4" onclick="comprarProducto('')">Comprar</button>
 
             <div class="product-card3" onclick="irADetalles('detalle producto 7.html')">
                 <img src="./assets/producto 7.png" alt="Producto 1">
@@ -86,7 +86,7 @@
                 <p>PRECIO: $695.520</p>
                 
             </div>
-            <button class="buy-button3" onclick="comprarProducto('error 404.html')">Comprar</button>
+            <button class="buy-button3" onclick="comprarProducto('')">Comprar</button>
 
             <div class="product-card3" onclick="irADetalles('detalle producto 8.html')">
                 <img src="./assets/producto 8.png" alt="Producto 1">
@@ -98,6 +98,12 @@
         </div>
     </section>
 
+    <div class="table-container">
+        <h2>Productos Cargados</h2>
+        <div id="product-grid"></div>
+        <a href="carga de productos.html" onclick="cargarProductos()">Volver a Cargar Productos</a>
+    </div>
+
     <footer>
         <div class="footer-links">
             <a href="error 404.html">Atención al clientes</a>
@@ -107,6 +113,7 @@
   
         </div>
     </footer>
+</body>
     <script src="./java/producto.js"></script>
 </body>
 </html>

@@ -7,26 +7,51 @@
     <link rel="stylesheet" href="./css/carga de productos.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">La Casa del Enfoque</div>
+            <div class="hamburger" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="usuario.html">Perfil</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="producto.html">Productos</a></li>
+                <li><a href="https://wa.link/r8x6t5" target="_blank">Contacto</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="product-container">
         <h2>Cargar Producto</h2>
-        <form id="productForm">
-            <label for="productName">Nombre del Producto:</label>
-            <input type="text" id="productName" name="productName" required>
+        <form id="product-form">
+            <label for="nombre-producto">Nombre del Producto:</label>
+            <input type="text" id="nombre-producto" name="nombre-producto" required>
             
-            <label for="productDescription">Descripción:</label>
-            <textarea id="productDescription" name="productDescription" required></textarea>
+            <label for="descripcion-producto">Descripción:</label>
+            <textarea id="descripcion-producto" name="descripcion-producto" required></textarea>
             
-            <label for="productPrice">Precio:</label>
-            <input type="number" id="productPrice" name="productPrice" required>
+            <label for="precio-producto">Precio:</label>
+            <input type="number" id="precio-producto" name="precio-producto" required>
 
-            <label for="productImage">Imagen del Producto:</label>
-            <input type="file" id="productImage" name="productImage" accept="image/*" required>
+            <label for="imagen-producto">Imagen del Producto:</label>
+            <input type="file" id="imagen-producto" name="imagen-producto" accept="image/*" required>
 
-            <button type="button" onclick= "saveProduct()">Guardar Producto</button>
+            <button type="submit" href="producto.html">Guardar Producto</button>
         </form>
     </div>
-
-    <script href="./js/carga de productos.js"></script>
+    <footer>
+        <div class="footer-links">
+            <a href="error 404.html">Atención al clientes</a>
+            <a href="https://wa.link/r8x6t5" target="_blank">Contactanos</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="https://wa.link/r8x6t5" target="_blank"><img src="./assets/Whatssap logo.png" alt="WhatsApp" class="social-media"></a>
+  
+        </div>
+    </footer>
+    <script src="./java/carga de productos.js" defer></script>
 </body>
 </html>
-
